@@ -10,6 +10,11 @@
         name: wireshark
         state: latest
 
+
+#-----------------------------------------------------------
+
+
+
 - name: update LB server
   hosts: lb
   remote_user: ubuntu
@@ -25,3 +30,27 @@
         name: wireshark
         state: latest
         
+
+
+
+- name: create directory, file and set timezone on all servers
+  hosts: webservers, nfs, db, lb
+  become: yes
+  tasks:
+
+    - name: create directory
+      file:
+        path: /home/sample
+        state: directory
+
+    - name: create file
+      file:
+        path: /home/sample/ansible.txt
+        state: touch
+
+
+    - name: set timezone
+      timezone:
+        name: Africa/lagos
+
+            
