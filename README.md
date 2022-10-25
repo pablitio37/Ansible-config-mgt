@@ -86,3 +86,6 @@ Now, it is time to execute ansible-playbook command and verify if your playbook 
   ![text11](https://user-images.githubusercontent.com/108102087/197863080-c512869d-f449-4621-8016-3d73d954a713.PNG)
   
   ![image](https://user-images.githubusercontent.com/108102087/197864492-574be008-da78-40a1-9f58-cf260302ee52.png)
+  
+  # Optional step – Repeat once again
+Update your ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook cycle again to see how easily you can manage a servers fleet of any size with just one command!
