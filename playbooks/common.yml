@@ -51,6 +51,6 @@
 
     - name: set timezone
       timezone:
-        name: Africa/lagos
+        name: Africa/Lagos
 
             
