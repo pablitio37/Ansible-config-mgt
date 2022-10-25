@@ -30,3 +30,37 @@ After you have successfully installed VSC, configure it to connect to your newly
 Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance
 
 git clone <ansible-config-mgt repo link>
+
+  # BEGIN ANSIBLE DEVELOPMENT
+In your ansible-config-mgt GitHub repository, create a new branch that will be used for development of a new feature.
+  
+  
+  Checkout the newly created feature branch to your local machine and start building your code and directory structure
+Create a directory and name it playbooks – it will be used to store all your playbook files.
+Create a directory and name it inventory – it will be used to keep your hosts organised.
+Within the playbooks folder, create your first playbook, and name it common.yml
+Within the inventory folder, create an inventory file (.yml) for each environment (Development, Staging Testing and Production) dev, staging, uat, and prod respectively.
+  
+  
+ # Set up an Ansible Inventory
+An Ansible inventory file defines the hosts and groups of hosts upon which commands, modules, and tasks in a playbook operate. Since our intention is to execute Linux commands on remote hosts, and ensure that it is the intended configuration on a particular server that occurs. It is important to have a way to organize our hosts in such an Inventory.
+
+Save below inventory structure in the inventory/dev file to start configuring your development servers. Ensure to replace the IP addresses according to your own setup.
+  
+  ![text5](https://user-images.githubusercontent.com/108102087/197803576-cc3c81e8-07f0-4e6e-88d6-118e4e5eac9b.PNG)
+  
+  
+I was able to ssh from the ansible-jenkins server to the load balancer and NFS server
+  
+  ![text6](https://user-images.githubusercontent.com/108102087/197806137-38cff41c-00e4-44d1-b515-6837233d0eeb.PNG)
+  
+  Update your inventory/dev.yml file with this snippet of code
+  
+  ![text7](https://user-images.githubusercontent.com/108102087/197808446-37d6713e-400c-42f0-b4ae-a701a20046f1.PNG)
+  
+   # Create a Common Playbook
+It is time to start giving Ansible the instructions on what you needs to be performed on all servers listed in inventory/dev.
+
+In common.yml playbook you will write configuration for repeatable, re-usable, and multi-machine tasks that is common to systems within the infrastructure.
+
+Update your playbooks/common.yml file
