@@ -64,3 +64,23 @@ It is time to start giving Ansible the instructions on what you needs to be perf
 In common.yml playbook you will write configuration for repeatable, re-usable, and multi-machine tasks that is common to systems within the infrastructure.
 
 Update your playbooks/common.yml file
+  
+  Update GIT with the latest code
+Now all of your directories and files live on your machine and you need to push changes made locally to GitHub.
+
+In the real world, you will be working within a team of other DevOps engineers and developers. It is important to learn how to collaborate with help of GIT. In many organisations there is a development rule that do not allow to deploy any code before it has been reviewed by an extra pair of eyes – it is also called "Four eyes principle".
+
+Now you have a separate branch, you will need to know how to raise a Pull Request (PR), get your branch peer reviewed and merged to the master branch.
+  
+  ![text8](https://user-images.githubusercontent.com/108102087/197814197-107f3112-b16b-4f48-9887-aacc1cc7c5db.PNG)
+  
+  ![text9](https://user-images.githubusercontent.com/108102087/197815792-4c72a0d3-b395-42f1-8799-c5d2ebee27ca.PNG)
+  
+  # Run first Ansible test
+Now, it is time to execute ansible-playbook command and verify if your playbook actually works
+  
+  ![text10](https://user-images.githubusercontent.com/108102087/197862648-f4f3fd14-4072-4939-955d-b0fa4154d59f.PNG)
+  
+  I go to each of the servers and check if wireshark has been installed by running
+  
+  ![text11](https://user-images.githubusercontent.com/108102087/197863080-c512869d-f449-4621-8016-3d73d954a713.PNG)
