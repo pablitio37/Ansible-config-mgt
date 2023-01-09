@@ -93,3 +93,5 @@ Update your ansible playbook with some new Ansible tasks and go through the full
 ![text13](https://user-images.githubusercontent.com/108102087/197892491-c5767baa-ec0e-4f66-a91d-b8b7820e6a58.PNG)
 
 making some adjustment
+
+save  artifacts
